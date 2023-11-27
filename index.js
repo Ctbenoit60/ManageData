@@ -7,6 +7,8 @@ let news = [
     content: "Residents should prepare..." }
     ];
 
+ 
+
 function addCard(title = " Untitles", content = "Missing Text") {
 const template =
 document.getElementById("card-template").content.cloneNode(true);
@@ -19,4 +21,5 @@ news.forEach((newsStory) => {
     addCard(newsStory.title, newsStory.content);
   });
 
+  setInterval(updateNews, 5000);
 
